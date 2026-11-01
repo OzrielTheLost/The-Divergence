@@ -965,8 +965,18 @@ def run_action(action, root_arg):
         return False
 
 
+def safe_console():
+    """Never crash on a character the console/pipe encoding lacks (e.g. cp1252 when output is redirected)."""
+    for stream in (sys.stdout, sys.stderr):
+        try:
+            stream.reconfigure(errors="replace")
+        except Exception:
+            pass
+
+
 def main():
     global ASSUME_YES
+    safe_console()
     ap = argparse.ArgumentParser(description=TOOL_TITLE)
     ap.add_argument("--root")
     g = ap.add_mutually_exclusive_group()
