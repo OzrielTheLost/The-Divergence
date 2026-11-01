@@ -1,0 +1,57 @@
+name: Build update tool
+
+on:
+  push:
+    branches: [main]
+    paths: ["updater/**", ".github/workflows/build-updater.yml"]
+    tags: ["updater-v*"]
+  pull_request:
+    paths: ["updater/**", ".github/workflows/build-updater.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r updater/requirements-build.txt
+
+      - name: Test
+        run: python -m pytest updater/tests -q
+
+      - name: Build single exe
+        working-directory: updater
+        run: >
+          pyinstaller --onefile --console --clean --noconfirm
+          --name "The Divergence Update Tool"
+          --icon assets/icon.ico
+          divergence_updater.py
+
+      - name: Smoke test the exe
+        working-directory: updater
+        shell: pwsh
+        run: |
+          & ".\dist\The Divergence Update Tool.exe" --help
+          if ($LASTEXITCODE -ne 0) { exit 1 }
+          Get-FileHash ".\dist\The Divergence Update Tool.exe" -Algorithm SHA256 | Format-List
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: The-Divergence-Update-Tool
+          path: updater/dist/The Divergence Update Tool.exe
+
+      - name: Attach to a release (tags only)
+        if: startsWith(github.ref, 'refs/tags/updater-v')
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "${{ github.ref_name }}" "updater/dist/The Divergence Update Tool.exe" --title "Update tool ${{ github.ref_name }}" --notes "The Divergence Update Tool. Drop it into your The Divergence folder and run it."
