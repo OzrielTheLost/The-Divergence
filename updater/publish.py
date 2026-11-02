@@ -29,7 +29,7 @@ import time
 
 REPO = "OzrielTheLost/The-Divergence"
 STORE_PREFIX = "store-"
-STORE_MAX_ASSETS = 950          # GitHub allows 1000 assets per release; keep headroom
+STORE_MAX_ASSETS = int(os.environ.get("DIVPUB_STORE_MAX", 950))          # GitHub allows 1000 assets per release; keep headroom
 # files over the 2 GiB asset limit are split into 1 GiB parts (env overrides exist for tests)
 PART_SIZE = int(os.environ.get("DIVPUB_PART_SIZE", 1024 ** 3))
 ASSET_LIMIT = int(os.environ.get("DIVPUB_ASSET_LIMIT", 2 * 1024 ** 3 - 1))
@@ -96,7 +96,7 @@ class LocalStore:
         self.base_url = base_url.rstrip("/")
         os.makedirs(folder, exist_ok=True)
 
-    def upload(self, items):
+    def upload(self, items, on_done=None):
         """items: list of (sha, path). Returns {sha: {"url": ...}}."""
         out = {}
         for sha, path in items:
@@ -124,66 +124,127 @@ class GitHubStore:
         return r.stdout
 
     def release_assets(self, tag):
+        """name -> {url, api, size, state} for one release, or None if the release doesn't exist."""
         try:
             data = json.loads(self.gh("api", f"repos/{self.repo}/releases/tags/{tag}"))
         except RuntimeError:
             return None
         out = {}
         tsv = self.gh("api", "--paginate", f"repos/{self.repo}/releases/{data['id']}/assets?per_page=100",
-                      "--jq", ".[] | [.name, .browser_download_url, .url] | @tsv")
+                      "--jq", ".[] | [.name, .browser_download_url, .url, .size, .state] | @tsv")
         for line in tsv.splitlines():
             if line.strip():
-                name, url, api = line.split("\t")
-                out[name] = {"url": url, "api": api}
+                name, url, api, size, state = line.split("\t")
+                out[name] = {"url": url, "api": api, "size": int(size), "state": state}
         return out
 
     def ensure_release(self, tag, title, notes):
         if self.release_assets(tag) is None:
             self.gh("release", "create", tag, "--repo", self.repo, "--title", title, "--notes", notes)
 
-    def upload(self, items):
+    def adopt_existing(self, wanted):
+        """Resume support: find blobs already uploaded to store-* releases (e.g. by a run that stopped partway).
+
+        wanted: {sha: size}. Returns {sha: entry} for complete uploads of the right size. Remembers incomplete
+        ones so upload() overwrites them in place, and recounts how full each store release really is.
+        """
+        tags = [t for t in self.gh("api", "--paginate", f"repos/{self.repo}/releases",
+                                   "--jq", ".[].tag_name").split() if t.startswith(STORE_PREFIX)]
+        stores = self.history.setdefault("stores", {})
+        self.partial = {}
+        found = {}
+        for tag in sorted(tags):
+            assets = self.release_assets(tag) or {}
+            stores[tag] = len(assets)
+            for name, a in assets.items():
+                if name not in wanted:
+                    continue
+                if a["state"] == "uploaded" and a["size"] == wanted[name]:
+                    found[name] = {"url": a["url"], "api": a["api"], "release": tag}
+                else:
+                    self.partial[name] = tag
+        if found or self.partial:
+            print(f"      Resuming: {len(found)} file(s) already uploaded, {len(self.partial)} incomplete upload(s) "
+                  f"will be redone.")
+        return found
+
+    def gh_upload(self, tag, path):
+        """Upload with retries. Rate limits wait (2-minute steps, up to 90 minutes) instead of failing."""
+        waited = 0
+        attempt = 0
+        while True:
+            try:
+                self.gh("release", "upload", tag, path, "--repo", self.repo, "--clobber")
+                return
+            except RuntimeError as e:
+                msg = str(e).lower()
+                if "rate limit" in msg or "secondary rate" in msg or "abuse" in msg:
+                    if waited >= 90 * 60:
+                        raise
+                    print(f"    GitHub rate limit hit; waiting 2 minutes ({waited // 60} min so far)...")
+                    time.sleep(120)
+                    waited += 120
+                    continue
+                attempt += 1
+                if attempt >= 4:
+                    raise
+                print(f"    retrying: {str(e).strip()[:200]}")
+                time.sleep(2 ** (attempt + 1))
+
+    def upload(self, items, on_done=None):
+        """items: list of (sha, path). Calls on_done(sha, entry) after each verified upload."""
         out = {}
         stores = self.history.setdefault("stores", {})
-        pending = list(items)
+        partial = getattr(self, "partial", {})
         tmpdir = tempfile.mkdtemp(prefix="divpub_")
         try:
-            while pending:
+            # incomplete uploads go back into the release that already holds their slot
+            redo = [(sha, p) for sha, p in items if sha in partial]
+            fresh = [(sha, p) for sha, p in items if sha not in partial]
+            plan = [(partial[sha], sha, p) for sha, p in redo]
+            while fresh:
                 tag = self.current_store(stores)
                 room = STORE_MAX_ASSETS - stores[tag]
-                batch, pending = pending[:room], pending[room:]
-                for i, (sha, path) in enumerate(batch, 1):
-                    link = os.path.join(tmpdir, sha)
-                    if not os.path.exists(link):
-                        try:
-                            os.link(path, link)
-                        except OSError:
-                            shutil.copyfile(path, link)
-                    print(f"  [{i}/{len(batch)}] uploading {sha[:12]} ({os.path.getsize(path) / 1048576:.1f} MB)"
-                          f" -> {tag}")
-                    for attempt in range(4):
-                        try:
-                            self.gh("release", "upload", tag, link, "--repo", self.repo, "--clobber")
-                            break
-                        except RuntimeError as e:
-                            if attempt == 3:
-                                raise
-                            print(f"    retrying: {str(e).strip()[:200]}")
-                            time.sleep(2 ** (attempt + 1))
-                    os.remove(link)
-                    stores[tag] += 1
-                assets = self.release_assets(tag)
-                for sha, _ in batch:
-                    if sha not in assets:
-                        raise RuntimeError(f"{sha} missing from {tag} after upload")
-                    out[sha] = dict(assets[sha], release=tag)
+                batch, fresh = fresh[:room], fresh[room:]
+                plan += [(tag, sha, p) for sha, p in batch]
+                stores[tag] += len(batch)  # reserve the slots
+            for i, (tag, sha, path) in enumerate(plan, 1):
+                link = os.path.join(tmpdir, sha)
+                if not os.path.exists(link):
+                    try:
+                        os.link(path, link)
+                    except OSError:
+                        shutil.copyfile(path, link)
+                print(f"  [{i}/{len(plan)}] uploading {sha[:12]} ({os.path.getsize(path) / 1048576:.1f} MB) -> {tag}")
+                self.gh_upload(tag, link)
+                os.remove(link)
+                entry = {"release": tag,
+                         "url": f"https://github.com/{self.repo}/releases/download/{tag}/{sha}"}
+                out[sha] = entry
+                if on_done:
+                    on_done(sha, entry)
+            # verify everything landed, and fill in the API urls
+            by_tag = {}
+            for tag, sha, _ in plan:
+                by_tag.setdefault(tag, []).append(sha)
+            for tag, shas in by_tag.items():
+                assets = self.release_assets(tag) or {}
+                for sha in shas:
+                    a = assets.get(sha)
+                    if not a or a["state"] != "uploaded":
+                        raise RuntimeError(f"{sha} missing or incomplete in {tag} after upload; rerun to retry")
+                    out[sha] = {"url": a["url"], "api": a["api"], "release": tag}
+                    if on_done:
+                        on_done(sha, out[sha])
         finally:
             shutil.rmtree(tmpdir, ignore_errors=True)
         return out
 
     def current_store(self, stores):
         tags = sorted(stores)
-        if tags and stores[tags[-1]] < STORE_MAX_ASSETS:
-            return tags[-1]
+        for t in tags:
+            if stores[t] < STORE_MAX_ASSETS:
+                return t
         tag = f"{STORE_PREFIX}{len(tags) + 1:03d}"
         self.ensure_release(tag, f"File store {len(tags) + 1}",
                             "Storage for The Divergence Update Tool. Files are named by their SHA-256. "
@@ -287,10 +348,24 @@ def main():
         else:
             store = GitHubStore(args.repo, history)
 
+        if to_upload and isinstance(store, GitHubStore):
+            adopted = store.adopt_existing({sha: os.path.getsize(p) for sha, p in to_upload.items()})
+            history["blobs"].update(adopted)
+            for sha in adopted:
+                to_upload.pop(sha, None)
+            save_json(history_path, history)
         if to_upload:
-            uploaded = store.upload(sorted(to_upload.items(), key=lambda kv: os.path.getsize(kv[1])))
+            done = {"n": 0}
+
+            def on_done(sha, entry):
+                history["blobs"][sha] = entry
+                done["n"] += 1
+                if done["n"] % 25 == 0:
+                    save_json(history_path, history)  # a rerun after a crash skips what's recorded here
+
+            uploaded = store.upload(sorted(to_upload.items(), key=lambda kv: os.path.getsize(kv[1])), on_done)
             history["blobs"].update(uploaded)
-            save_json(history_path, history)  # record progress even if a later step fails
+            save_json(history_path, history)
     finally:
         shutil.rmtree(tmp_parts, ignore_errors=True)
 
