@@ -25,29 +25,6 @@ The tool never trusts version numbers: it compares file contents, so any old or 
 like the latest release. Edited `.me3` profiles are kept; the new one is saved next to it as `.new`. Close the game
 before updating.
 
-## For Kiwi: publishing a release
-
-Needs Python 3.10+, `pip install requests`, and the GitHub CLI logged in (`gh auth login`).
-
-```
-git clone https://github.com/OzrielTheLost/The-Divergence
-cd The-Divergence
-python updater/publish.py "D:/Games/MMV + Convergence Weapons/The Divergence" --version 1.1.3 ^
-    --changelog "D:/Games/MMV + Convergence Weapons/The Divergence/CHANGELOG.txt" --dry      # preview
-python updater/publish.py "D:/Games/MMV + Convergence Weapons/The Divergence" --version 1.1.3 ^
-    --changelog "D:/Games/MMV + Convergence Weapons/The Divergence/CHANGELOG.txt" --push     # publish
-```
-
-Point it at the folder laid out exactly like the release zip. The first publish uploads every file (~1,400 files, a
-few GB, so it takes a while); later ones upload only changed files. The manifest is pushed last, so players never
-see a half-published release.
-
-To advertise a new tool version for self-update, add `--updater-exe "path/to/The Divergence Update Tool.exe"`
-(bump `TOOL_VERSION` in `updater/divergence_updater.py` first).
-
-**The repo must be public before players can use the tool.** While it's private, test with
-`set DIVERGENCE_GITHUB_TOKEN=<token with repo read access>` before running the exe.
-
 ## Building the exe
 
 GitHub Actions builds it on every change under `updater/` (Actions tab, artifact *The-Divergence-Update-Tool*). Push
