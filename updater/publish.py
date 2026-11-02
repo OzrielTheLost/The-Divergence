@@ -37,6 +37,7 @@ BLOCK = 4 * 1024 * 1024
 
 IGNORE = ["*.bak", "*.prev", "*.log", "desktop.ini", "Thumbs.db", ".divergence_update/*", "*/.divergence_update/*",
           ".smithbox/*", "*/.smithbox/*", "*-dcx/*", "_divergence_tool_swap.bat",
+          "mod/project.json",  # Smithbox project file: not used by the game, contains a local path
           "The Divergence Update Tool.exe", "The Divergence Update Tool.exe.new"]
 # Files players may edit: only replaced if unchanged from a shipped version, otherwise saved as <name>.new
 USER_FILES = ["*.me3", "*.ini", "*.toml", "*.cfg"]
@@ -210,6 +211,8 @@ def main():
     ap.add_argument("--updater-version", help="version of --updater-exe (default: read from divergence_updater.py)")
     ap.add_argument("--local-store", help="copy blobs into this folder instead of GitHub Releases")
     ap.add_argument("--base-url", help="URL where --local-store is served")
+    ap.add_argument("--exclude", action="append", default=[], metavar="PATTERN",
+                    help="extra path pattern to leave out (repeatable), e.g. --exclude \"mod/notes/*\"")
     ap.add_argument("--dry", action="store_true")
     ap.add_argument("--push", action="store_true", help="git commit + push manifest.json/history.json in --out")
     args = ap.parse_args()
@@ -222,6 +225,7 @@ def main():
     history = load_json(history_path, {"paths": {}, "blobs": {}, "stores": {}, "versions": []})
 
     print(f"[1/4] Hashing {root} ...")
+    IGNORE.extend(p.replace("\\", "/") for p in args.exclude)
     files = scan_release(root)
     entries = {}
     t0 = time.time()
