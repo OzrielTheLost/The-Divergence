@@ -1,11 +1,11 @@
 {
- "changelog": "1.1.2 (2026-11-01)\n\nSeeds are unchanged, so map rolls match 1.1.\n\nNew\n- Quicksilver Husk: a new great enemy field boss in a field camp and in the castle rooftop pool. When his poise breaks, a quicksilver orb appears nearby and heals him for up to 15 s. Hitting the orb damages him.\n- Shabriri's Chosen: a new field boss in a field camp and in the castle basement pool. Its second phase brings the frenzy rain.\n- Celestial Blade: its legendary power now works. With the blade in either hand you regain about 1% FP per second and get an Energy Shell that comes back 15 s after it breaks.\n- Spirit summons in crates and chests: every crate and chest has its own 3% chance to hold a Spirit Ash on top of its normal loot. Blue ashes turn up twice as often as purple.\n- Relic effects: Dragonlord's Recall and Stormbreaker's Deflection can drop as relic effects that change a compatible starting armament's skill (every hero except Ironeye and Recluse).\n\nChanges\n- Night 1: Rhys replaces Seera, with a new pre-night wave.\n- The Storm Stomp relic effect is now named Dragonlord's Recall, the skill it already gave.\n- Sigur: his pre-night wave is now an Erdtree Sentry and five Erdtree Guardians.\n- Castle pools: the basement is now split evenly between Vigo, the Crystal Crab, Shabriri's Chosen and the Erdtree Sentry. The Quicksilver Husk joins the rooftop.\n- Madness on players: it now hits once for 6% + 30 HP and 10% + 30 FP, then resets, like in Convergence. This covers enemy, boss and swamp madness and self-inflicted madness. Madness you inflict on enemies still lasts 30 s.\n- Frostbite on players: it now deals Convergence's one-time 6% + 30 hit, and raises damage taken by 20% instead of 15%.\n\nFixes\n- Recluse: Convergence's elemental spells now leave residue of their element, including Night Stars, Star Swarm, Ice Dart, Icecrag, Rancorstorm, the Nail spells, Elden Stars, Radagon's Rings, Roiling Magma, Furnace Maul and the Cragbolt spells.\n- Spell sounds: 28 Convergence spell sounds now ship as their own files instead of inside the main sound bank.\n- Slag Spears, Cragbolt Trio and Frenzied Flare no longer leave you stuck walking after the cast.\n- Spell descriptions: buff spells show their real numbers (132 spells), 15 wrong buff numbers are corrected, perpetual spells no longer mention resting or warping, and every description fits in 5 lines.\n- Blessing of Wisdom: its FP regen now matches its description (1 FP per second).\n- Spirit summons: the summoning bell sound plays again.\n- Godskin Matriarch: the rune in her hand during her phase change now appears. Idris, Konrad and one other boss had the same missing effect texture, now fixed too.",
+ "changelog": "1.2 (2026-11-03)\n\nNew seeds: the Shifting Earth and evergaol rolls have changed, so bosses turn up in different places than in 1.1.\n\nNew\n- Promised Consort Radahn: a new night 2 boss.\n- Metyr, Mother of Fingers: a new night 2 boss.\n- Dakk: a new boss. He appears in place of the Fallingstar Beast in about half of meteor strike runs, and as a tier 2 field boss in a field camp.\n- Godwyn's Cragblades: new legendary power. While Call to Thunder is active, hits build 3 stages of ancient lightning. Stage 2 empowers the buff (+10% lightning) and heavy attacks call down Ancient Honed Bolt's lightning. At stage 3 the skill casts Ire of the Dragon God at 1.5x damage.\n- Catalysts: every spell school now has a staff or seal at Common, Uncommon and Rare. The new ones are Demi-Human Queen's Staff (Uncommon), Academy Glintstone Staff (Uncommon), Staff of the Guilty (Rare) and Godslayer's Seal (Rare).\n- Night horde: three new camps: skeletons, wormfaces, and misbegotten with beastmen.\n- Frenzy tower: its orb can now give madness weapons and spirit summons, with an extra roll.\n- Spirit summons: corpses you loot now have the same 3% chance of a Spirit Ash as crates and chests.\n\nChanges\n- Run events: every event except boss raids now comes twice as often as in Nightreign, the same for every Nightlord: night horde 6.6%, meteor strike 5.4%, double night boss 4.9%, frenzy tower 4.2%, mausoleum 3.6% and crystallized sorcerer's rise 2.6%. Boss raids stay at about 21% and never raid their own Nightlord.\n- Rhys: new pre-night wave: a Carian Knight Troll, a Battlemage, a Glintstone Sorcerer and two Pages.\n- Quicksilver Husk: he staggers more often, and his orb heals 2% of his HP every 2 s (about 16% at most) instead of refilling him.\n- Spirit summons:\n  - Summons now scale with your level.\n  - Summons take no fall damage and can't die from falling.\n  - Spirits that fall more than 30 m behind fade out and reappear next to you.\n  - Skeletal Militiamen, Skeletal Bandits and Nox Ancestor Lasko get back up after falling, as in Elden Ring.\n- Spell descriptions: 265 spell descriptions rewritten, Nightreign's own included, with real numbers and durations for heals, buffs, enchants and debuffs. Spells no longer promise equip load changes that Nightreign doesn't have.\n- Blessing of Grace: gives +8 stamina recovery (Greater Blessing of Grace +12) instead of an equip load bonus that did nothing.\n- Music: Caimar plays his own track again, and the Quicksilver Husk and Rhys now play their Convergence tracks.\n\nFixes\n- Dual wielding: the same power weapon in both hands now gives both weapons its power. This covers Bloodletter, Black Blade, Quicksilver Fragment, Sword of Hadea, Daergraf's Opus, Galvanic Culling Blade, Godskin Flayer, Rimeheart, Midra, Fingerslayer and Rosus' Harvester. Bloodletter's fire shows on the hand that holds it, and two-handing one weapon no longer removes the other's aura.\n- Quicksilver Husk: he can be staggered again after his first break, and can no longer get stuck after one.\n- Rhys: his spear stays in his hand.",
  "files": {
   "CHANGELOG.txt": {
-   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699957774",
-   "sha256": "c873d192dde493ce786fa36ef33dcb4115d5f15916fda3af3fcdd3ab8544b997",
-   "size": 7080,
-   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-001/c873d192dde493ce786fa36ef33dcb4115d5f15916fda3af3fcdd3ab8544b997"
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704161075",
+   "sha256": "f1dc1f7789a81e73b89ce9a33e303050f4497a2068071b910e8620a1c3637b2c",
+   "size": 10132,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/f1dc1f7789a81e73b89ce9a33e303050f4497a2068071b910e8620a1c3637b2c"
   },
   "The Divergence (Convergence night bosses ONLY).me3": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699935274",
@@ -50,10 +50,10 @@
    "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-002/956cf2cd7bb952c59e423ac08f021b2004576059189ada2414ff9762f6928e9a"
   },
   "mod/action/script/c0000.hks": {
-   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/700075893",
-   "sha256": "084a54c9021eaea9f75019c7552d0fa1e403372ebd187b0a42364b601e5651a5",
-   "size": 1310704,
-   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-003/084a54c9021eaea9f75019c7552d0fa1e403372ebd187b0a42364b601e5651a5"
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704161939",
+   "sha256": "aee1d2d2fdd1954feabbf82aa9e5ee6d2bbaa57443e431c925bd991ae26e6e66",
+   "size": 1319965,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/aee1d2d2fdd1954feabbf82aa9e5ee6d2bbaa57443e431c925bd991ae26e6e66"
   },
   "mod/action/script/c0110.hks": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699973892",
@@ -398,6 +398,12 @@
    "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-001/5d9ea4b76573f6a464b5dde7ca7ec27728144ee6cbe4796a1b735706d60542b0"
   },
   "mod/action/script/c3971.hks": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699973892",
+   "sha256": "5d9ea4b76573f6a464b5dde7ca7ec27728144ee6cbe4796a1b735706d60542b0",
+   "size": 35091,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-001/5d9ea4b76573f6a464b5dde7ca7ec27728144ee6cbe4796a1b735706d60542b0"
+  },
+  "mod/action/script/c4051.hks": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699973892",
    "sha256": "5d9ea4b76573f6a464b5dde7ca7ec27728144ee6cbe4796a1b735706d60542b0",
    "size": 35091,
@@ -10130,16 +10136,16 @@
    "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-002/87ee14a64ba177d2ea85c5b11eda722a84aef85dc17dc5205bc6e57c27bd8bec"
   },
   "mod/chr/c0000.anibnd.dcx": {
-   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/700228395",
-   "sha256": "e2331fe0b998b8fa57ea664c078ae86948611a6bcbc047a8c6b21fca16fe69f0",
-   "size": 11341984,
-   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/e2331fe0b998b8fa57ea664c078ae86948611a6bcbc047a8c6b21fca16fe69f0"
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704164226",
+   "sha256": "26f4743a87927209118402d9ca332c11074d07b3479f598232d407f3684f793e",
+   "size": 11337424,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/26f4743a87927209118402d9ca332c11074d07b3479f598232d407f3684f793e"
   },
   "mod/chr/c0000.behbnd.dcx": {
-   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/700058420",
-   "sha256": "81710cae4fdfcbd970b58d26b5ef3e0020a9527964770d02dc51ea51eadcfd74",
-   "size": 691728,
-   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-003/81710cae4fdfcbd970b58d26b5ef3e0020a9527964770d02dc51ea51eadcfd74"
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704161745",
+   "sha256": "0cd8d44627aa77698ac232c7ce0ae1b1bc3f26a90ab44771894c4995b8affded",
+   "size": 691856,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/0cd8d44627aa77698ac232c7ce0ae1b1bc3f26a90ab44771894c4995b8affded"
   },
   "mod/chr/c0000.chrbnd.dcx": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699988621",
@@ -10148,10 +10154,10 @@
    "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-002/37c034d5a49355213167214b32ead4355adfecaba72016701cd1f6319f2000b6"
   },
   "mod/chr/c0000_a6x.anibnd.dcx": {
-   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/700253915",
-   "sha256": "59eddf4ef73442eb73457d6a25c8c7f93d16dc52d365607a22c213c7f9d4c79b",
-   "size": 44832976,
-   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/59eddf4ef73442eb73457d6a25c8c7f93d16dc52d365607a22c213c7f9d4c79b"
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704165447",
+   "sha256": "84c21118be42c33001e39882d096b2cd3424051ce1da300c8028d487c30bc48f",
+   "size": 44393328,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/84c21118be42c33001e39882d096b2cd3424051ce1da300c8028d487c30bc48f"
   },
   "mod/chr/c1011.anibnd.dcx": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/700212177",
@@ -11024,10 +11030,10 @@
    "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-002/9365c962b20614d9290c09c3963c35028f14c04ba4325f2eacac45b22157c938"
   },
   "mod/chr/c3155.chrbnd.dcx": {
-   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/700173008",
-   "sha256": "97c4d08f4e838b97ae69fb77f51318351f3459dfa2e4be7f7d3ffa8bf1228206",
-   "size": 3831789,
-   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/97c4d08f4e838b97ae69fb77f51318351f3459dfa2e4be7f7d3ffa8bf1228206"
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704163121",
+   "sha256": "b7bbd5cd202219adeef2c7494a09feadecf4e96a5bff916f91f3aa799cfca1af",
+   "size": 3831786,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/b7bbd5cd202219adeef2c7494a09feadecf4e96a5bff916f91f3aa799cfca1af"
   },
   "mod/chr/c3155_div00.anibnd.dcx": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/700135763",
@@ -11664,6 +11670,48 @@
    "sha256": "edbbbe4f3d1f0402abd3b3fc3f00e0f2cce7c7d433c41f6f15e2367815f9ac23",
    "size": 1098083,
    "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-003/edbbbe4f3d1f0402abd3b3fc3f00e0f2cce7c7d433c41f6f15e2367815f9ac23"
+  },
+  "mod/chr/c4051.anibnd.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704161409",
+   "sha256": "57c1c57f6dac9496996cf7e1dabf11d97fbb9d3c57346c967314471f3f8025e4",
+   "size": 138943,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/57c1c57f6dac9496996cf7e1dabf11d97fbb9d3c57346c967314471f3f8025e4"
+  },
+  "mod/chr/c4051.behbnd.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704161479",
+   "sha256": "831fbc42f388ab9bcc993a3e0df3ebf7703c4b16e212286db4eca8a2825c17a7",
+   "size": 142922,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/831fbc42f388ab9bcc993a3e0df3ebf7703c4b16e212286db4eca8a2825c17a7"
+  },
+  "mod/chr/c4051.chrbnd.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704162863",
+   "sha256": "6fa54ade10a8728563fb8ebf0b618485dd464d8132d51aff0b0a1162880140b9",
+   "size": 3755327,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/6fa54ade10a8728563fb8ebf0b618485dd464d8132d51aff0b0a1162880140b9"
+  },
+  "mod/chr/c4051_div00.anibnd.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704162319",
+   "sha256": "f6cc74f557e9f8dfcae8220b3631564c4d17d30c5f90de1a057e62becbe579b6",
+   "size": 1860604,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/f6cc74f557e9f8dfcae8220b3631564c4d17d30c5f90de1a057e62becbe579b6"
+  },
+  "mod/chr/c4051_div01.anibnd.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704162535",
+   "sha256": "88309e33e57762310e3f1c92d4e422b69a2ad9382407e679a1df29767e406031",
+   "size": 2262253,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/88309e33e57762310e3f1c92d4e422b69a2ad9382407e679a1df29767e406031"
+  },
+  "mod/chr/c4051_h.texbnd.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704164502",
+   "sha256": "cbd973eca02e60853f114a5bb2f4f08cdf471a96fb4b3ca492a26eb56529c712",
+   "size": 11998870,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/cbd973eca02e60853f114a5bb2f4f08cdf471a96fb4b3ca492a26eb56529c712"
+  },
+  "mod/chr/c4051_l.texbnd.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704161672",
+   "sha256": "c0361fc35b4d085a4e6cda2f6a00da4ea0d632707bc56e9b12b5613879c6d3b9",
+   "size": 620974,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/c0361fc35b4d085a4e6cda2f6a00da4ea0d632707bc56e9b12b5613879c6d3b9"
   },
   "mod/chr/c4072.anibnd.dcx": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699999206",
@@ -13050,6 +13098,48 @@
    "sha256": "ce8e5183d66ebf3338e58b58b49c27917c243e0fafbf545eb876661625ccad27",
    "size": 1118056,
    "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-003/ce8e5183d66ebf3338e58b58b49c27917c243e0fafbf545eb876661625ccad27"
+  },
+  "mod/chr/c5220.anibnd.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704161167",
+   "sha256": "c71c24c423a04dbbb4eb392ff6753de9b250d0c2b26d572aec874fed0b99c76d",
+   "size": 62256,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/c71c24c423a04dbbb4eb392ff6753de9b250d0c2b26d572aec874fed0b99c76d"
+  },
+  "mod/chr/c5220.behbnd.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704161127",
+   "sha256": "bcf79809b69205c00dcacd6c9035464c52aba4fc19a3b7f1326fcd59d27706df",
+   "size": 57184,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/bcf79809b69205c00dcacd6c9035464c52aba4fc19a3b7f1326fcd59d27706df"
+  },
+  "mod/chr/c5220.chrbnd.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704163969",
+   "sha256": "4a0cc5f6988f19deb5095e8643bc1801423a5ef8d329df35eee0914d2f3d64ae",
+   "size": 10271984,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/4a0cc5f6988f19deb5095e8643bc1801423a5ef8d329df35eee0914d2f3d64ae"
+  },
+  "mod/chr/c5220_div00.anibnd.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704162164",
+   "sha256": "1ce33025871686bb399572e157728e5e6c3fa12451bcac62451dc7ed205fa8fa",
+   "size": 1801890,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/1ce33025871686bb399572e157728e5e6c3fa12451bcac62451dc7ed205fa8fa"
+  },
+  "mod/chr/c5220_div01.anibnd.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704162040",
+   "sha256": "4f71852be2a560a70de165c33127a1c9e517d5edd2570a9f48f5aa9332490067",
+   "size": 1580452,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/4f71852be2a560a70de165c33127a1c9e517d5edd2570a9f48f5aa9332490067"
+  },
+  "mod/chr/c5220_h.texbnd.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704164852",
+   "sha256": "3629b81edc643b84484b3c20b298bacba991a15bfd7601d7e901fb2ecb085ec9",
+   "size": 17563072,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/3629b81edc643b84484b3c20b298bacba991a15bfd7601d7e901fb2ecb085ec9"
+  },
+  "mod/chr/c5220_l.texbnd.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704161827",
+   "sha256": "11ba03dfed54e6ff6e4375c8dd91cea219bd5b9afa6a5af375bbc2d5871762be",
+   "size": 1285824,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/11ba03dfed54e6ff6e4375c8dd91cea219bd5b9afa6a5af375bbc2d5871762be"
   },
   "mod/chr/c5230.anibnd.dcx": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699982174",
@@ -14666,16 +14756,16 @@
    "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/928eb7794e0cd4e5f5630ea18c305c30ffdbe9e5cb70225e01bf26f6b07b83d8"
   },
   "mod/cnvonly/regulation.bin": {
-   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/700177838",
-   "sha256": "a308f71d8b0a59e6843ec93129d139934e683b4ec19a458ea80201944fc5e456",
-   "size": 3927680,
-   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/a308f71d8b0a59e6843ec93129d139934e683b4ec19a458ea80201944fc5e456"
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704163347",
+   "sha256": "be7fa0ad7f656e73eb838817a84034e74cf97ba579ac65e6619fa131809bebda",
+   "size": 3933584,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/be7fa0ad7f656e73eb838817a84034e74cf97ba579ac65e6619fa131809bebda"
   },
   "mod/dll/Scripts-Data-Exposer-NR.dll": {
-   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699997083",
-   "sha256": "d06c89d8010301ef5b2c1532e71675bf41cafb474e1a3074ad07ccb7ea0739c9",
-   "size": 83456,
-   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-002/d06c89d8010301ef5b2c1532e71675bf41cafb474e1a3074ad07ccb7ea0739c9"
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704161324",
+   "sha256": "91ddad548c4c69e48255f5ca9ab75dc03e3133d08d129f0b43a792897b62af27",
+   "size": 89088,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/91ddad548c4c69e48255f5ca9ab75dc03e3133d08d129f0b43a792897b62af27"
   },
   "mod/dll/custom_drop_fxrs.dll": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/700050558",
@@ -14706,6 +14796,102 @@
    "sha256": "11198f529e53ddfa0be15b75f06c30977ea162981f8f7a94acb1dc6efe9cd259",
    "size": 23536,
    "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-001/11198f529e53ddfa0be15b75f06c30977ea162981f8f7a94acb1dc6efe9cd259"
+  },
+  "mod/event/m20_00_00_00.emevd.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704157530",
+   "sha256": "cd1128616400e2da0eb0905721cc843419fa1a0e947595e8d8e03425373dfc14",
+   "size": 586,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/cd1128616400e2da0eb0905721cc843419fa1a0e947595e8d8e03425373dfc14"
+  },
+  "mod/event/m20_10_00_00.emevd.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704157602",
+   "sha256": "de77519fdcd04cb9f5089f86e44e67ce1e270c567a064ae4f042d3f25085bf7c",
+   "size": 586,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/de77519fdcd04cb9f5089f86e44e67ce1e270c567a064ae4f042d3f25085bf7c"
+  },
+  "mod/event/m20_20_00_00.emevd.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704157707",
+   "sha256": "f419cf67944813c39cdfa7561051546e78e9406a6f3e6dd0b48202572943911f",
+   "size": 586,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/f419cf67944813c39cdfa7561051546e78e9406a6f3e6dd0b48202572943911f"
+  },
+  "mod/event/m20_30_00_00.emevd.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704157760",
+   "sha256": "7fbcf5d4cf5b996ccbbf308d1506d87f254671fc2312beca2dd96e09d9297d7d",
+   "size": 586,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/7fbcf5d4cf5b996ccbbf308d1506d87f254671fc2312beca2dd96e09d9297d7d"
+  },
+  "mod/event/m20_40_00_00.emevd.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704157851",
+   "sha256": "5e9d4cfe679f61f5c89ebb389902331e0b39e5f644ccce21629552c65e9ba25a",
+   "size": 586,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/5e9d4cfe679f61f5c89ebb389902331e0b39e5f644ccce21629552c65e9ba25a"
+  },
+  "mod/event/m20_50_00_00.emevd.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704158176",
+   "sha256": "d0f84726b2c1dd4db7745b493cca3bbefcdbb3fd75ac615790dba1201299cba8",
+   "size": 591,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/d0f84726b2c1dd4db7745b493cca3bbefcdbb3fd75ac615790dba1201299cba8"
+  },
+  "mod/event/m20_60_00_00.emevd.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704157438",
+   "sha256": "1a88928979b19a78c33f7cd0178c42c503397f73106a0eed68204116879af15b",
+   "size": 585,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/1a88928979b19a78c33f7cd0178c42c503397f73106a0eed68204116879af15b"
+  },
+  "mod/event/m20_70_00_00.emevd.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704157922",
+   "sha256": "7ed15d8d2c902cabf89cfdeb0e49c1a44b4b8a7331a2f372f2144a4221abee68",
+   "size": 586,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/7ed15d8d2c902cabf89cfdeb0e49c1a44b4b8a7331a2f372f2144a4221abee68"
+  },
+  "mod/event/m20_80_00_00.emevd.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704158653",
+   "sha256": "c0644a331988f54176f2fb1c71ac5f23a2488ea99efb991f9204196aa27e8219",
+   "size": 643,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/c0644a331988f54176f2fb1c71ac5f23a2488ea99efb991f9204196aa27e8219"
+  },
+  "mod/event/m20_90_00_00.emevd.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704158048",
+   "sha256": "2c39998852e697de63214810482a5c0a8f3d3ed61b9e0b93ae224ff5e0ffd1e2",
+   "size": 590,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/2c39998852e697de63214810482a5c0a8f3d3ed61b9e0b93ae224ff5e0ffd1e2"
+  },
+  "mod/event/m21_00_00_00.emevd.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704158274",
+   "sha256": "2ff96577a4d564a332e7f50e85606b9ee5f2ac3636f4ccd373fb2f1b28dbce7b",
+   "size": 627,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/2ff96577a4d564a332e7f50e85606b9ee5f2ac3636f4ccd373fb2f1b28dbce7b"
+  },
+  "mod/event/m21_10_00_00.emevd.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704158747",
+   "sha256": "63e145aee53b49ee466b821adfca8229cd93c96b78d7735e8155ecd1a6d678fb",
+   "size": 645,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/63e145aee53b49ee466b821adfca8229cd93c96b78d7735e8155ecd1a6d678fb"
+  },
+  "mod/event/m21_20_00_00.emevd.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704158430",
+   "sha256": "cfff3a52161a2e139fcbcfb0e1771548d0ee881c79dc31ab102e2cb0a5d694ab",
+   "size": 638,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/cfff3a52161a2e139fcbcfb0e1771548d0ee881c79dc31ab102e2cb0a5d694ab"
+  },
+  "mod/event/m21_30_00_00.emevd.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704158574",
+   "sha256": "af25a9ed1a960b1429862bca4dac53bac2406efba80944127a00bb3be2f7ecd4",
+   "size": 642,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/af25a9ed1a960b1429862bca4dac53bac2406efba80944127a00bb3be2f7ecd4"
+  },
+  "mod/event/m21_40_00_00.emevd.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704158368",
+   "sha256": "ccff67a60791121c3a5ca0d49f404412e066cbded714a05bf79d5bfbca84ad47",
+   "size": 636,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/ccff67a60791121c3a5ca0d49f404412e066cbded714a05bf79d5bfbca84ad47"
+  },
+  "mod/event/m21_50_00_00.emevd.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704158490",
+   "sha256": "693539c4c1f2be507e274f5d8264e116f968a74c2aa84e5b520ffb495812226d",
+   "size": 639,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/693539c4c1f2be507e274f5d8264e116f968a74c2aa84e5b520ffb495812226d"
   },
   "mod/event/m30_00_00_00.emevd.dcx": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699943531",
@@ -14742,6 +14928,24 @@
    "sha256": "e7cf5b9b4164b495148a7465bc4b2f5887701bd873cbe70db112b651ad5e208d",
    "size": 880,
    "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-001/e7cf5b9b4164b495148a7465bc4b2f5887701bd873cbe70db112b651ad5e208d"
+  },
+  "mod/event/m46_07_00_00.emevd.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704157173",
+   "sha256": "de6b46394b5abf3f27312587226ef4c4bac72aa677e20cf2a47cb8043aad914a",
+   "size": 432,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-002/de6b46394b5abf3f27312587226ef4c4bac72aa677e20cf2a47cb8043aad914a"
+  },
+  "mod/event/m46_12_00_00.emevd.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704157275",
+   "sha256": "db77534ee9f96f1eab7dd87d94e3b18aacb4d03d831ec7698adb73bf8d2207a4",
+   "size": 432,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/db77534ee9f96f1eab7dd87d94e3b18aacb4d03d831ec7698adb73bf8d2207a4"
+  },
+  "mod/event/m46_13_00_00.emevd.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704157370",
+   "sha256": "b998a6382ccf9d49f2b018a25d8f4c52460bca451355e0cda072a4da729dcffa",
+   "size": 432,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/b998a6382ccf9d49f2b018a25d8f4c52460bca451355e0cda072a4da729dcffa"
   },
   "mod/event/m46_50_00_00.emevd.dcx": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699949783",
@@ -14876,10 +15080,10 @@
    "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-001/f188594e1c297f876b9717129d51991c9fd46b19302cc0fb0ebc974d4d34b0cf"
   },
   "mod/event/m46_74_00_00.emevd.dcx": {
-   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699944716",
-   "sha256": "caa1318d04a846b0a08aab37939baf84523fa869cc37fa6f2a79266676dbeed7",
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704159700",
+   "sha256": "5d32e822c84b82e1c08fd59dafd6f0d4934f5b5e3a103f703ac335c4f544965a",
    "size": 1808,
-   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-001/caa1318d04a846b0a08aab37939baf84523fa869cc37fa6f2a79266676dbeed7"
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/5d32e822c84b82e1c08fd59dafd6f0d4934f5b5e3a103f703ac335c4f544965a"
   },
   "mod/event/m46_75_00_00.emevd.dcx": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699936495",
@@ -14894,10 +15098,10 @@
    "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-001/9cdb684c128725d80dd455462d56b07995acc5e88fe9906b1e1282db02b80190"
   },
   "mod/event/m46_77_00_00.emevd.dcx": {
-   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699936673",
-   "sha256": "0efc4414d507941da4a7862bb56d9b4a4ea0d59b4cbdc6e2e2a272f0db51b980",
-   "size": 912,
-   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-001/0efc4414d507941da4a7862bb56d9b4a4ea0d59b4cbdc6e2e2a272f0db51b980"
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704159061",
+   "sha256": "11aa6928b3e24c658d2e7474b644d384e16fdd50dfc90e3301711dc22071a260",
+   "size": 1006,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/11aa6928b3e24c658d2e7474b644d384e16fdd50dfc90e3301711dc22071a260"
   },
   "mod/event/m46_80_00_00.emevd.dcx": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699944754",
@@ -15001,6 +15205,12 @@
    "size": 2688,
    "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-001/d12388822657cb361a1882aad948a5a184d37d3d8b29428b18056fd1a0876d8d"
   },
+  "mod/event/m49_46_00_00.emevd.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704159765",
+   "sha256": "7fc10bf946ec05ac3c7110bd0c743495a9d4415fa33febdbe7e3270eca49fec6",
+   "size": 2288,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/7fc10bf946ec05ac3c7110bd0c743495a9d4415fa33febdbe7e3270eca49fec6"
+  },
   "mod/event/m49_50_00_00.emevd.dcx": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699940071",
    "sha256": "9e4bd4f2b6677249c22dfffe8dac10f30cea8a1cc6cccbfda3a00f024c6d0ff1",
@@ -15092,10 +15302,10 @@
    "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-001/b445f524b181d50a30e16718245905a534968c2f1de4937a69a6e57af1b28419"
   },
   "mod/event/m49_65_00_00.emevd.dcx": {
-   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699941379",
-   "sha256": "90ea36c022670686701e3526a819d35e39b80bce58bb1038ff992297f33f8722",
-   "size": 1168,
-   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-001/90ea36c022670686701e3526a819d35e39b80bce58bb1038ff992297f33f8722"
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704159259",
+   "sha256": "458be4cbeadcdcfcf27166053fa95f422bed3e671a3b8e7020a7b8c4d49580c6",
+   "size": 1133,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/458be4cbeadcdcfcf27166053fa95f422bed3e671a3b8e7020a7b8c4d49580c6"
   },
   "mod/event/m49_66_00_00.emevd.dcx": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699942069",
@@ -15266,10 +15476,10 @@
    "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-001/b0a67c0cf32c17bf024feace625ca2c86d6e17ccb8bed4f081edfb953af55af2"
   },
   "mod/event/m49_98_00_00.emevd.dcx": {
-   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699941565",
-   "sha256": "cac5262c47fa2bb6f20d6571ced9303541f64a6a75b1a9b7fe27ffe858a4b55b",
-   "size": 1184,
-   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-001/cac5262c47fa2bb6f20d6571ced9303541f64a6a75b1a9b7fe27ffe858a4b55b"
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704159330",
+   "sha256": "2f407c28f0980a7e02962cee71ceaf74f3809fc510c98a13465c00910e4bcf8a",
+   "size": 1171,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/2f407c28f0980a7e02962cee71ceaf74f3809fc510c98a13465c00910e4bcf8a"
   },
   "mod/event/m52_13_00_00.emevd.dcx": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699943021",
@@ -15463,6 +15673,102 @@
    "size": 142587,
    "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-002/fae9255066a8e634b24ca862da4fe2534ebfc640dbae843d7701ddf38fd335fd"
   },
+  "mod/map/mapstudio/m20_00_00_00.msb.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704160319",
+   "sha256": "43e6215843bf2eefb4a41e9aa53a9ab5efdc7c708c79702a2013bdf2b5efe6d7",
+   "size": 4784,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/43e6215843bf2eefb4a41e9aa53a9ab5efdc7c708c79702a2013bdf2b5efe6d7"
+  },
+  "mod/map/mapstudio/m20_10_00_00.msb.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704160251",
+   "sha256": "532f4c3680682dae1e000a1da556e401ab578d20add15eb8a16c5d77bb7c7ce2",
+   "size": 4480,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/532f4c3680682dae1e000a1da556e401ab578d20add15eb8a16c5d77bb7c7ce2"
+  },
+  "mod/map/mapstudio/m20_20_00_00.msb.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704160417",
+   "sha256": "738556ec8d8407e4ee298b6189ca3ed5d387d5b28f2d4fede52185a6f15561f8",
+   "size": 4864,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/738556ec8d8407e4ee298b6189ca3ed5d387d5b28f2d4fede52185a6f15561f8"
+  },
+  "mod/map/mapstudio/m20_30_00_00.msb.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704160860",
+   "sha256": "2c8705153f3253a1abcc499620f5c8613a9846dc110e2928309487303dd23162",
+   "size": 5616,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/2c8705153f3253a1abcc499620f5c8613a9846dc110e2928309487303dd23162"
+  },
+  "mod/map/mapstudio/m20_40_00_00.msb.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704161005",
+   "sha256": "4a02cf8c3c9091bed0cd7e704b8984950bf6a77d0c4dd44169dd3ea6aebd5e53",
+   "size": 5680,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/4a02cf8c3c9091bed0cd7e704b8984950bf6a77d0c4dd44169dd3ea6aebd5e53"
+  },
+  "mod/map/mapstudio/m20_50_00_00.msb.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704160755",
+   "sha256": "06f4369a6918c40998d91bae08a615711f5512e873f24e0bd1bea46392eefa67",
+   "size": 5408,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/06f4369a6918c40998d91bae08a615711f5512e873f24e0bd1bea46392eefa67"
+  },
+  "mod/map/mapstudio/m20_60_00_00.msb.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704159985",
+   "sha256": "16a125bd4ed92af305765caa68a02dfed285fbf41e750025c66bc68f16d47546",
+   "size": 3728,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/16a125bd4ed92af305765caa68a02dfed285fbf41e750025c66bc68f16d47546"
+  },
+  "mod/map/mapstudio/m20_70_00_00.msb.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704160679",
+   "sha256": "f7bae70b5802bcc12333b6ff730c283a3af0b581757a8bdd18df8f5022924528",
+   "size": 5232,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/f7bae70b5802bcc12333b6ff730c283a3af0b581757a8bdd18df8f5022924528"
+  },
+  "mod/map/mapstudio/m20_80_00_00.msb.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704160041",
+   "sha256": "3c516a8712afcc1f7bdff6d0b2d4e7ddb62fb6873d10728d8aac9938656e24ff",
+   "size": 3808,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/3c516a8712afcc1f7bdff6d0b2d4e7ddb62fb6873d10728d8aac9938656e24ff"
+  },
+  "mod/map/mapstudio/m20_90_00_00.msb.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704160800",
+   "sha256": "39e79f082b825cb138887ebbe79874f5c45208bf9db631ba23317adf0163086b",
+   "size": 5504,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/39e79f082b825cb138887ebbe79874f5c45208bf9db631ba23317adf0163086b"
+  },
+  "mod/map/mapstudio/m21_00_00_00.msb.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704160617",
+   "sha256": "01e96a1d326685fe9bdc384315d64ff30755c1227add5fcd5365ab7f5375827c",
+   "size": 4912,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/01e96a1d326685fe9bdc384315d64ff30755c1227add5fcd5365ab7f5375827c"
+  },
+  "mod/map/mapstudio/m21_10_00_00.msb.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704160538",
+   "sha256": "194d78d7a033c110ff9986203b29e832e9adbd519458970c8351b8f81e347343",
+   "size": 4864,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/194d78d7a033c110ff9986203b29e832e9adbd519458970c8351b8f81e347343"
+  },
+  "mod/map/mapstudio/m21_20_00_00.msb.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704160899",
+   "sha256": "30b69ecf50b5101fe4ae3ff3b1da9d97427dbb39a95f15efdc37abd49ed6b964",
+   "size": 5616,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/30b69ecf50b5101fe4ae3ff3b1da9d97427dbb39a95f15efdc37abd49ed6b964"
+  },
+  "mod/map/mapstudio/m21_30_00_00.msb.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704160573",
+   "sha256": "628294b8b466d264ef681a96a831706105d88b13d23719efe2e7c896c76fac0b",
+   "size": 4864,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/628294b8b466d264ef681a96a831706105d88b13d23719efe2e7c896c76fac0b"
+  },
+  "mod/map/mapstudio/m21_40_00_00.msb.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704160150",
+   "sha256": "fe6a4b92ff5c252d95fac41e73cb887b15632d0ffba744e1607ad0a8e3e36877",
+   "size": 3904,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/fe6a4b92ff5c252d95fac41e73cb887b15632d0ffba744e1607ad0a8e3e36877"
+  },
+  "mod/map/mapstudio/m21_50_00_00.msb.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704160204",
+   "sha256": "0ec29279596925f2158f2fa03776e48ed43d8af6318980509a68074133b20329",
+   "size": 4048,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/0ec29279596925f2158f2fa03776e48ed43d8af6318980509a68074133b20329"
+  },
   "mod/map/mapstudio/m30_00_00_00.msb.dcx": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699987547",
    "sha256": "0280bd0154ae803d8d30c9b0ab07433677f45fb5c1d21fdfe477c8b535900653",
@@ -15498,6 +15804,24 @@
    "sha256": "d8d2dc69582477d3d75bfb6bb4f6f7a9fe7afb2161e7a5f13436194ae8732cf7",
    "size": 3620,
    "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-001/d8d2dc69582477d3d75bfb6bb4f6f7a9fe7afb2161e7a5f13436194ae8732cf7"
+  },
+  "mod/map/mapstudio/m46_07_00_00.msb.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704159467",
+   "sha256": "a7fab5fee27c3c343a6d8a86c7b2dcd271457787bc48f3267290ed5138dadfc3",
+   "size": 1344,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/a7fab5fee27c3c343a6d8a86c7b2dcd271457787bc48f3267290ed5138dadfc3"
+  },
+  "mod/map/mapstudio/m46_12_00_00.msb.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704159202",
+   "sha256": "1e4ddf70fd6b26c72928a4c4d4e790d55b8fdcda223c41adceb375a0f37c0a5e",
+   "size": 1008,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/1e4ddf70fd6b26c72928a4c4d4e790d55b8fdcda223c41adceb375a0f37c0a5e"
+  },
+  "mod/map/mapstudio/m46_13_00_00.msb.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704159413",
+   "sha256": "ef2823176dedf5d599765346f2144f21d8c42275bdcb8188b731cf3893a8fa86",
+   "size": 1216,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/ef2823176dedf5d599765346f2144f21d8c42275bdcb8188b731cf3893a8fa86"
   },
   "mod/map/mapstudio/m46_40_00_00.msb.dcx": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699957692",
@@ -15668,10 +15992,10 @@
    "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-001/2cdf8fce068103430277b260627800e4fe2efee02bc97658bb78c742eb7e9e6a"
   },
   "mod/map/mapstudio/m46_77_00_00.msb.dcx": {
-   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699943319",
-   "sha256": "5c51f58c1379422b7044a09c303bcf2a6d990e68d14daf15182faadf0f26d407",
-   "size": 1426,
-   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-001/5c51f58c1379422b7044a09c303bcf2a6d990e68d14daf15182faadf0f26d407"
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704159530",
+   "sha256": "f7240a1bb113ca502bb59ab144f964fe8cf6953a5ca8036f5f9d255fa9e5517e",
+   "size": 1376,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/f7240a1bb113ca502bb59ab144f964fe8cf6953a5ca8036f5f9d255fa9e5517e"
   },
   "mod/map/mapstudio/m46_80_00_00.msb.dcx": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699943560",
@@ -15798,6 +16122,12 @@
    "sha256": "1aff194c7e30d242d170727a9c0efb1a55912e41906fe754e3d0213f9e21c9a6",
    "size": 1400,
    "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-001/1aff194c7e30d242d170727a9c0efb1a55912e41906fe754e3d0213f9e21c9a6"
+  },
+  "mod/map/mapstudio/m49_46_00_00.msb.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704158882",
+   "sha256": "fc9e5ef905189e5c990b484aa1d58ae1b0cd0bf881712235166b03351b327e96",
+   "size": 847,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/fc9e5ef905189e5c990b484aa1d58ae1b0cd0bf881712235166b03351b327e96"
   },
   "mod/map/mapstudio/m49_50_00_00.msb.dcx": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699937861",
@@ -16064,10 +16394,10 @@
    "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-001/af70d2fd425adbc5eb837b032ebfdcaf3b44f697f1ead10b9dad893f5849f8bb"
   },
   "mod/map/mapstudio/m49_98_00_00.msb.dcx": {
-   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699936259",
-   "sha256": "c348f63dac7b5a23ece9a3e937221a781f7078400839f160313d4e317ef2e2ea",
-   "size": 881,
-   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-001/c348f63dac7b5a23ece9a3e937221a781f7078400839f160313d4e317ef2e2ea"
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704158985",
+   "sha256": "54f69a8d32505f5ddac003980aa2902062342887eff75bb12f28be9df1738576",
+   "size": 899,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/54f69a8d32505f5ddac003980aa2902062342887eff75bb12f28be9df1738576"
   },
   "mod/map/mapstudio/m52_00_00_00.msb.dcx": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699938212",
@@ -16376,10 +16706,10 @@
    "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/ba0769d6cf5ec3da50a14d4da05ae6cf742199205f4bcf64b0f65b63adca2240"
   },
   "mod/msg/engus/item_dlc01.msgbnd.dcx": {
-   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/700041763",
-   "sha256": "470fd97bf9cc157db91e2b2da9613157c312c1b02d782f7bce7e14198bd5c894",
-   "size": 350288,
-   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-002/470fd97bf9cc157db91e2b2da9613157c312c1b02d782f7bce7e14198bd5c894"
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704161563",
+   "sha256": "515220e0f32ff296ba8590322a1704ae67d29111263c12f477a0225ed0805892",
+   "size": 351728,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/515220e0f32ff296ba8590322a1704ae67d29111263c12f477a0225ed0805892"
   },
   "mod/msg/engus/menu_dlc01.msgbnd.dcx": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/700010832",
@@ -19910,10 +20240,10 @@
    "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-003/c65b8531e3db83ce68b86bc232b83ca3d3c95628e3d927b5d1e12ba466b62d3a"
   },
   "mod/regulation.bin": {
-   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/700178117",
-   "sha256": "270f3be2b9b13103d396f6199c840eca5c852e4657413f54064f3dd447d14e21",
-   "size": 3928768,
-   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/270f3be2b9b13103d396f6199c840eca5c852e4657413f54064f3dd447d14e21"
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704163544",
+   "sha256": "5e27038fe83a005457da65cc03776e626eb158781257b3675f9fd1271cecf255",
+   "size": 3934960,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/5e27038fe83a005457da65cc03776e626eb158781257b3675f9fd1271cecf255"
   },
   "mod/script/012000_battle.luabnd.dcx": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699943635",
@@ -20072,10 +20402,10 @@
    "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-001/803cca5401a3a991dc60068d0632c1700a9895e511aa8e97c207ac7f3f380d3b"
   },
   "mod/script/210500_battle.luabnd.dcx": {
-   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699948503",
-   "sha256": "34585a54ed7d62b89ece6ee5b19b6ccd8483cb7c000337dc278a3b7e22802d2f",
-   "size": 3408,
-   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-001/34585a54ed7d62b89ece6ee5b19b6ccd8483cb7c000337dc278a3b7e22802d2f"
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704159918",
+   "sha256": "d4b5adba69fd374224b76f0baee5bd81b583dac00e56c2f4ff37962e0a73e3b0",
+   "size": 3456,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/d4b5adba69fd374224b76f0baee5bd81b583dac00e56c2f4ff37962e0a73e3b0"
   },
   "mod/script/211000_battle.luabnd.dcx": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699951283",
@@ -20858,10 +21188,10 @@
    "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-001/23fb4dded45a79bde53b89eb25b561eed14c57ac63d903f5e669c9668c6fcc03"
   },
   "mod/script/522000_battle.luabnd.dcx": {
-   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699955961",
-   "sha256": "5b401d1dd66d4ae57671dbb45f11dabcd0fb7854b9143172ec23d3ba338354dd",
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704160959",
+   "sha256": "9677e63d04c163c02245fb8b3a7dab06d6b070ad3e1b49af4654a17b112d86d3",
    "size": 5648,
-   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-001/5b401d1dd66d4ae57671dbb45f11dabcd0fb7854b9143172ec23d3ba338354dd"
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/9677e63d04c163c02245fb8b3a7dab06d6b070ad3e1b49af4654a17b112d86d3"
   },
   "mod/script/523000_battle.luabnd.dcx": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699956620",
@@ -21932,16 +22262,16 @@
    "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/a10ece54b5bc6474556470d6832377647d2750f951ab29712f92c0769d1850d0"
   },
   "mod/sd/cs_main.bnk": {
-   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/700255833",
-   "sha256": "e9e8ea7fc8bd0a533b9bc0c6ca6e0bc9a5392801cc67827e624b8d1a7bbefcdf",
-   "size": 55066391,
-   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/e9e8ea7fc8bd0a533b9bc0c6ca6e0bc9a5392801cc67827e624b8d1a7bbefcdf"
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704166361",
+   "sha256": "8a853f0f555e107c9f86bbcac0cd38850d4fc84eac89943a11f4a728d51c8f53",
+   "size": 55066703,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/8a853f0f555e107c9f86bbcac0cd38850d4fc84eac89943a11f4a728d51c8f53"
   },
   "mod/sd/cs_smain.bnk": {
-   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/700142002",
-   "sha256": "bb6cfef43e959b76f4806571a2a01eca29c277ded796e3b03d2e4ff7273e8b8d",
-   "size": 2678601,
-   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/bb6cfef43e959b76f4806571a2a01eca29c277ded796e3b03d2e4ff7273e8b8d"
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704162686",
+   "sha256": "a9d5171a74047390cdb5ff288b42b0aa78aa8eadbcf8a5b978a35e200be397d8",
+   "size": 2685123,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/a9d5171a74047390cdb5ff288b42b0aa78aa8eadbcf8a5b978a35e200be397d8"
   },
   "mod/sd/enus/cs_c2130.bnk": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/700191681",
@@ -21950,10 +22280,10 @@
    "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/615fe7761378ab76d62bd7733088f396115c103530d66b8728117d0fbdad62d9"
   },
   "mod/sd/nrmusic_outputs.json": {
-   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699945270",
-   "sha256": "b0ed4e3e010f373e0b6dde97459af6ad3294c00984c06de7df77e67c2fd6a5ac",
-   "size": 2218,
-   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-001/b0ed4e3e010f373e0b6dde97459af6ad3294c00984c06de7df77e67c2fd6a5ac"
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704159842",
+   "sha256": "70025bb6b35847179651be2f607e9f0c5f2aac1ed71bafd53dc7d3a30ed2d3b8",
+   "size": 2374,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/70025bb6b35847179651be2f607e9f0c5f2aac1ed71bafd53dc7d3a30ed2d3b8"
   },
   "mod/sd/wem/10/102790198.wem": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699979496",
@@ -22009,6 +22339,12 @@
    "size": 61140,
    "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-002/81ecfbeca7bf9579ea4528640c16860c09e39a774334847f33dbbf1966e64267"
   },
+  "mod/sd/wem/12/12602990.wem": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/700160136",
+   "sha256": "fe4e772bc583243d651598a08b1eac0dd0c5a4089fff2f45d6e9b0caab216d19",
+   "size": 3472622,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/fe4e772bc583243d651598a08b1eac0dd0c5a4089fff2f45d6e9b0caab216d19"
+  },
   "mod/sd/wem/13/1344983215.wem": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/700210608",
    "sha256": "bdeb01c65a71a4836ccea2cfea6af46522949e95534f8a4ad6d48bd914255a94",
@@ -22039,6 +22375,12 @@
    "size": 112534,
    "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-002/041d34c8a532975a6525527ea08afd758fecbf3877450d80a0fa3c93ff5518c9"
   },
+  "mod/sd/wem/16/1678662188.wem": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/700201446",
+   "sha256": "559ed495d246e47e9c8ee1eb6fc9e058bca393ba2c5783b53926b8fe83460d7e",
+   "size": 5419824,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/559ed495d246e47e9c8ee1eb6fc9e058bca393ba2c5783b53926b8fe83460d7e"
+  },
   "mod/sd/wem/18/185818245.wem": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/700155338",
    "sha256": "d70c38b0cf0daedf3e28f9e4803428160278f8ab90d12547738ce82b8d8e2dc6",
@@ -22056,6 +22398,18 @@
    "sha256": "0f0697ce1ddb207a6301ad2f3ad522e00f5f6de4b90997e6d0d14064cf82b135",
    "size": 37088,
    "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-001/0f0697ce1ddb207a6301ad2f3ad522e00f5f6de4b90997e6d0d14064cf82b135"
+  },
+  "mod/sd/wem/20/2091916654.wem": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/700159094",
+   "sha256": "37dd7abb14240c82bc6fdc23642eeb8859e1e84a6bd1c3dc9befbeb37259cce3",
+   "size": 3432480,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/37dd7abb14240c82bc6fdc23642eeb8859e1e84a6bd1c3dc9befbeb37259cce3"
+  },
+  "mod/sd/wem/21/216459743.wem": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/700209296",
+   "sha256": "72ca4413b5e35e3140fc8fd5f8b961b88ea5827501239b349fb1ad086fa118b6",
+   "size": 6520186,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/72ca4413b5e35e3140fc8fd5f8b961b88ea5827501239b349fb1ad086fa118b6"
   },
   "mod/sd/wem/21/218636136.wem": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/700174681",
@@ -22735,6 +23089,12 @@
    "size": 2712880,
    "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/5a040c696963ac5fe99bfd63ba6cb0a4640e74749ca936eb24fc09e69374fcb6"
   },
+  "mod/sfx/sfxbnd_c4051.ffxbnd.dcx": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704162416",
+   "sha256": "160e4fcda1d6a37559d7a410bcff3e1efd4e10e002f5be512bc4a6e85fbd2e1e",
+   "size": 1944128,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/160e4fcda1d6a37559d7a410bcff3e1efd4e10e002f5be512bc4a6e85fbd2e1e"
+  },
   "mod/sfx/sfxbnd_c4135.ffxbnd.dcx": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/700057830",
    "sha256": "9b2e85afb8b9354fd03e00ad02295e59d4b0dcf89da2a12f3d4eb2d39f7e1a2a",
@@ -22946,10 +23306,10 @@
    "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-002/838210cbfe756e9105ba9edeb95305c319cd424c2f73c974bf7d99a7790672ff"
   },
   "mod/sfx/sfxbnd_c5220.ffxbnd.dcx": {
-   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/700011387",
-   "sha256": "4b932f6f7a0585986608391102edaee56c335bb51838562d00efe824948e33d8",
-   "size": 172352,
-   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-002/4b932f6f7a0585986608391102edaee56c335bb51838562d00efe824948e33d8"
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704163757",
+   "sha256": "c05e09bed9de6606d8846f3c205ade7b67b8190d5505a38910fc05f367b352b5",
+   "size": 4400096,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/c05e09bed9de6606d8846f3c205ade7b67b8190d5505a38910fc05f367b352b5"
   },
   "mod/sfx/sfxbnd_c5230.ffxbnd.dcx": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/700008406",
@@ -23140,7 +23500,7 @@
  },
  "mod": "The Divergence",
  "obsolete": {},
- "released": "2026-11-01",
+ "released": "2026-11-02",
  "schema": 1,
- "version": "1.1.2"
+ "version": "1.2"
 }
