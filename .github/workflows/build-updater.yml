@@ -55,3 +55,22 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh release create "${{ github.ref_name }}" "updater/dist/The Divergence Update Tool.exe" --title "Update tool ${{ github.ref_name }}" --notes "The Divergence Update Tool. Drop it into your The Divergence folder and run it."
+
+      # Stable public download link, refreshed on every build of main:
+      # https://github.com/OzrielTheLost/The-Divergence/releases/download/updater-latest/The-Divergence-Update-Tool.exe
+      - name: Publish to the updater-latest release (main or manual run)
+        if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && github.ref == 'refs/heads/main')
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          Copy-Item "updater/dist/The Divergence Update Tool.exe" "The-Divergence-Update-Tool.exe"
+          gh release view updater-latest --repo "$env:GITHUB_REPOSITORY" *> $null
+          if ($LASTEXITCODE -ne 0) {
+            gh release create updater-latest --repo "$env:GITHUB_REPOSITORY" --target "$env:GITHUB_SHA" --latest `
+              --title "The Divergence Update Tool" `
+              --notes "Download The-Divergence-Update-Tool.exe, put it in your The Divergence folder (any version) and run it. Pick Install for a fresh install."
+            if ($LASTEXITCODE -ne 0) { exit 1 }
+          }
+          gh release upload updater-latest The-Divergence-Update-Tool.exe --clobber --repo "$env:GITHUB_REPOSITORY"
+          if ($LASTEXITCODE -ne 0) { exit 1 }
