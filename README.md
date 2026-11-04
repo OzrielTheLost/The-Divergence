@@ -10,7 +10,7 @@ Update host and update tool for **The Divergence** (Convergence for Elden Ring N
 
 ## For players
 
-Download `The Divergence Update Tool.exe`, drop it into your The Divergence folder (the one with `mod` and
+Download [The-Divergence-Update-Tool.exe](https://github.com/OzrielTheLost/The-Divergence/releases/download/updater-latest/The-Divergence-Update-Tool.exe), drop it into your The Divergence folder (the one with `mod` and
 `The Divergence.me3`; any older version works) and run it.
 
 | Option | What it does |

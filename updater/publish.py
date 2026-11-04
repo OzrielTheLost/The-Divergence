@@ -140,7 +140,8 @@ class GitHubStore:
 
     def ensure_release(self, tag, title, notes):
         if self.release_assets(tag) is None:
-            self.gh("release", "create", tag, "--repo", self.repo, "--title", title, "--notes", notes)
+            self.gh("release", "create", tag, "--repo", self.repo, "--title", title, "--notes", notes,
+                    "--latest=false")  # keep the update tool release as "Latest" on the repo page
 
     def adopt_existing(self, wanted):
         """Resume support: find blobs already uploaded to store-* releases (e.g. by a run that stopped partway).
