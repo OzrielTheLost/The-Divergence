@@ -34,7 +34,7 @@ import requests
 
 from art import ASCII_CONTENT, COLOR_MAP_JSON
 
-TOOL_VERSION = "1.0.0"
+TOOL_VERSION = "1.0.1"
 TOOL_TITLE = "The Divergence Update Tool"
 REPO = "OzrielTheLost/The-Divergence"
 MANIFEST_URLS = [
@@ -433,6 +433,7 @@ def plan_update(root, manifest, strict=False):
     downloads = []   # (relpath, entry, kind) kind: add | replace | new_beside
     removals = []    # relpath
     extras = []      # files under mod/ the release doesn't ship and history doesn't know
+    waiting = []     # edited user files whose up-to-date <name>.new is already there from an earlier run
 
     total = len(files)
     for i, (path, entry) in enumerate(sorted(files.items()), 1):
@@ -447,7 +448,10 @@ def plan_update(root, manifest, strict=False):
         if local == entry["sha256"]:
             continue
         if entry.get("user") and local not in set(entry.get("known", [])):
-            downloads.append((path, entry, "new_beside"))
+            if cache.sha(root, path + ".new") == entry["sha256"]:
+                waiting.append(path)  # already saved beside it by an earlier run; nothing to download
+            else:
+                downloads.append((path, entry, "new_beside"))
         else:
             downloads.append((path, entry, "replace"))
     print()
@@ -467,7 +471,8 @@ def plan_update(root, manifest, strict=False):
                 extras.append(path)
 
     cache.save()
-    return {"downloads": downloads, "removals": removals, "extras": extras, "first_run": first_run}
+    return {"downloads": downloads, "removals": removals, "extras": extras, "first_run": first_run,
+            "waiting": waiting}
 
 
 # ==========================================
@@ -603,6 +608,7 @@ def do_update(root, check_only=False, strict=False):
     if not downloads and not removals:
         write_json_text(state_path(root, "version.txt"), manifest.get("version", ""))
         print("\n[✓] Everything is up to date.")
+        print_switch_reminder(plan["waiting"])
         return True
 
     adds = sum(1 for _, _, k in downloads if k == "add")
@@ -671,7 +677,22 @@ def do_update(root, check_only=False, strict=False):
     print(f"    Replaced/removed files were moved to {os.path.relpath(backup, root)} (menu: Restore).")
     if manifest.get("changelog"):
         print("\nWhat's new:\n" + manifest["changelog"].strip())
+    print_switch_reminder(news + plan["waiting"])
     return True
+
+
+def print_switch_reminder(paths):
+    """Edited profiles keep the player's file; tell them plainly to switch to the new one."""
+    if not paths:
+        return
+    print("\n[!] You edited these files, so the update left them as they were and saved the new version next to")
+    print("    each one as <name>.new:")
+    for p in sorted(paths):
+        print(f"      {p}  ->  {p}.new")
+    print("    The game still uses your old file, and it may not load everything this version needs.")
+    print("    Switch to the new one: rename or delete your old file, then remove '.new' from the new file's name")
+    print("    (for example 'The Divergence.me3.new' becomes 'The Divergence.me3'). If you want your own changes")
+    print("    back, copy them into the new file.")
 
 
 def write_json_text(path, text):

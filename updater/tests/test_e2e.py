@@ -170,10 +170,15 @@ def test_edited_user_file_kept(env, releases):
     inst = env["tmp"] / "edited"
     shutil.copytree(v1, inst)
     write(str(inst), "The Divergence.me3", "my own edits\n")
-    run_tool(env, inst)
+    r = run_tool(env, inst)
+    assert "Switch to the new one" in r.stdout, r.stdout
     with open(os.path.join(inst, "The Divergence.me3")) as f:
         assert f.read() == "my own edits\n"
     assert open(os.path.join(inst, "The Divergence.me3.new")).read() == open(os.path.join(v2, "The Divergence.me3")).read()
+    # second run: the .new is already there, so nothing to download, but the reminder stays
+    r = run_tool(env, inst)
+    assert "up to date" in r.stdout, r.stdout
+    assert "The Divergence.me3  ->  The Divergence.me3.new" in r.stdout
 
 
 def test_restore(env, releases):

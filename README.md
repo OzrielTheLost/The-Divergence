@@ -22,7 +22,8 @@ Download [The-Divergence-Update-Tool.exe](https://github.com/OzrielTheLost/The-D
 | 5. Restore last backup | Undo the last update |
 
 The tool never trusts version numbers: it compares file contents, so any old or hand-edited install ends up exactly
-like the latest release. Edited `.me3` profiles are kept; the new one is saved next to it as `.new`. Close the game
+like the latest release. Edited `.me3` profiles are kept; the new one is saved next to it as `.new`, and the tool
+reminds you to switch to it. Close the game
 before updating.
 
 ## Building the exe
