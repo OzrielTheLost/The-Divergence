@@ -1,11 +1,11 @@
 {
- "changelog": "1.2 (2026-11-03)\n\nNew seeds: the Shifting Earth and evergaol rolls have changed.\n\nNew\n- Promised Consort Radahn: a new night 2 boss.\n- Metyr, Mother of Fingers: a new night 2 boss.\n- Dakk: a new boss. He appears in place of the Fallingstar Beast in about half of meteor strike runs, and as a tier 2 field boss in a field camp.\n- Godwyn's Cragblades: new legendary power. While Call to Thunder is active, hits build 3 stages of ancient lightning. Stage 2 empowers the buff (+10% lightning) and heavy attacks call down Ancient Honed Bolt's lightning. At stage 3 the skill casts Ire of the Dragon God at 1.5x damage.\n- Catalysts: every spell school now has a staff or seal at Common, Uncommon and Rare. The new ones are Demi-Human Queen's Staff (Uncommon), Academy Glintstone Staff (Uncommon), Staff of the Guilty (Rare) and Godslayer's Seal (Rare).\n- Night horde: three new camps: skeletons, wormfaces, and misbegotten with beastmen.\n- Frenzy tower: its orb can now give madness weapons and spirit summons, with an extra roll.\n- Spirit summons: corpses you loot now have the same 3% chance of a Spirit Ash as crates and chests.\n\nChanges\n- Run events: every event except boss raids now comes twice as often as in Nightreign, the same for every Nightlord: night horde 6.6%, meteor strike 5.4%, double night boss 4.9%, frenzy tower 4.2%, mausoleum 3.6% and crystallized sorcerer's rise 2.6%. Boss raids stay at about 21% and never raid their own Nightlord.\n- Spirit summons:\n  - Summons now scale with your level, at half the Revenant's spirit scaling.\n  - Summons take no fall damage and can't die from falling.\n  - Spirits that fall more than 30 m behind fade out and reappear next to you.\n  - Skeletal Militiamen, Skeletal Bandits and Nox Ancestor Lasko get back up after falling, as in Elden Ring.\n- Spell descriptions: 265 spell descriptions rewritten, Nightreign's own included, with real numbers and durations for heals, buffs, enchants and debuffs. Spells no longer promise equip load changes that Nightreign doesn't have.\n- Blessing of Grace: gives +8 stamina recovery (Greater Blessing of Grace +12) instead of an equip load bonus that did nothing.\n\nFixes\n- Dual wielding: the same legendary weapon in both hands now gives both weapons its power. This covers Bloodletter, Black Blade, Quicksilver Fragment, Sword of Hadea, Daergraf's Opus, Galvanic Culling Blade, Godskin Flayer, Rimeheart, Midra, Fingerslayer and Rosus' Harvester. Bloodletter's fire shows on the hand that holds it, and two-handing one weapon no longer removes the other's aura.\n- Rhys: his spear now tracks to his hand properly.\n- Galvanic Culling Blades:\n  - The tap skill no longer roots you in place when the blades are in your left hand.\n  - The frozen blade now shows its own texture.\n  - Swapping forms shows the new form right away instead of after your next attack.\n- Weapon textures: Blightpole, Crystaline Claw, Dragonkin Scepter, Goras' Claw, Primeval Splinter, Snow Witch Staff, Staff of Briar, Starcaller Mattock and Three Finger Blade now show their own textures instead of an enemy's.",
+ "changelog": "1.2.1 (2026-11-07)\n\nSeeds are unchanged, so map rolls match 1.2.\n\nFixes\n- Roundtable Hold: Daergraf now appears along with the rest of the hold instead of a few seconds later. This may fix occasional crashes when returning from an expedition.\n- Updater: if you've edited your launch profile, the updater now reminds you at the end to switch to the new one, and stops downloading it again on every run.",
  "files": {
   "CHANGELOG.txt": {
-   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/707585149",
-   "sha256": "40ac8beeee9466d59f62998b0baade3eb06c8f61bf21481e39494728db409679",
-   "size": 10315,
-   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/40ac8beeee9466d59f62998b0baade3eb06c8f61bf21481e39494728db409679"
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/724124453",
+   "sha256": "286d707a3a98b729777a0d5eea57c41be778579fefd43e0a07d9358a7d2423b6",
+   "size": 10718,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/286d707a3a98b729777a0d5eea57c41be778579fefd43e0a07d9358a7d2423b6"
   },
   "The Divergence (Convergence night bosses ONLY).me3": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699935274",
@@ -14792,10 +14792,10 @@
    "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-002/d92639cafa6cbf4ad085cace013acd5d749d7fb2cbf548cfe529f03eb1326aa9"
   },
   "mod/event/m10_00_00_00.emevd.dcx": {
-   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699968220",
-   "sha256": "11198f529e53ddfa0be15b75f06c30977ea162981f8f7a94acb1dc6efe9cd259",
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/724124517",
+   "sha256": "18889b67bbf4b08b76a7a581f3c91b608912af8511388853b64056845ee34980",
    "size": 23536,
-   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-001/11198f529e53ddfa0be15b75f06c30977ea162981f8f7a94acb1dc6efe9cd259"
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/18889b67bbf4b08b76a7a581f3c91b608912af8511388853b64056845ee34980"
   },
   "mod/event/m20_00_00_00.emevd.dcx": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704157530",
@@ -23500,7 +23500,14 @@
  },
  "mod": "The Divergence",
  "obsolete": {},
- "released": "2026-11-03",
+ "released": "2026-11-08",
  "schema": 1,
- "version": "1.2"
+ "updater": {
+  "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/724124575",
+  "sha256": "6baa638ad8cf2fd3f2f82d94cca26875b95812af35794f37ff4a8ad0e436b1b0",
+  "size": 13378071,
+  "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/6baa638ad8cf2fd3f2f82d94cca26875b95812af35794f37ff4a8ad0e436b1b0",
+  "version": "1.0.1"
+ },
+ "version": "1.2.1"
 }
