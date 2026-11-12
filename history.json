@@ -2780,6 +2780,11 @@
    "release": "store-003",
    "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-003/271cbdedab8eba1bc4a9cfb6b3b491f426363361a2a457330e9d19cd22cb2441"
   },
+  "272e2aed84b5a5599c67eb434ce8724af3483ef7e04caf39ff11a97e9c93878d": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/737754404",
+   "release": "store-004",
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/272e2aed84b5a5599c67eb434ce8724af3483ef7e04caf39ff11a97e9c93878d"
+  },
   "2740bd4ec3858222c2990a0f4ae01dae30a23ed2a393d13670970ba82f61158a": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/700144992",
    "release": "store-004",
@@ -10605,6 +10610,11 @@
    "release": "store-002",
    "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-002/934d323551429f25d19f004a081c88e446014f5596e6e784ddb2c5b909a42f46"
   },
+  "9354c98adc040bc821fad376ef1a6a1e66e51099cae2ad50822ae91f3628d240": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/737754450",
+   "release": "store-004",
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/9354c98adc040bc821fad376ef1a6a1e66e51099cae2ad50822ae91f3628d240"
+  },
   "9357f8df10ea7ab6822dc414cbe3f47cb526fe09bb5d777246d9f0a8258fb50d": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/700106569",
    "release": "store-003",
@@ -18096,7 +18106,8 @@
    "90c428e343b23bc7a1afe1837570479bbc97a411c6cec4980368ee18a1208763",
    "40ac8beeee9466d59f62998b0baade3eb06c8f61bf21481e39494728db409679",
    "286d707a3a98b729777a0d5eea57c41be778579fefd43e0a07d9358a7d2423b6",
-   "32c8ac06d110575ba57d22a1825f298a5c8f105172aefa0c274a5e9b37d4b0ad"
+   "32c8ac06d110575ba57d22a1825f298a5c8f105172aefa0c274a5e9b37d4b0ad",
+   "272e2aed84b5a5599c67eb434ce8724af3483ef7e04caf39ff11a97e9c93878d"
   ],
   "The Divergence (Convergence night bosses ONLY).me3": [
    "f0e048dc29ec6c7577df54a8001318f115c0dc4deed356e38e61684f5eb2247b",
@@ -28255,7 +28266,8 @@
   "mod/regulation.bin": [
    "270f3be2b9b13103d396f6199c840eca5c852e4657413f54064f3dd447d14e21",
    "5e27038fe83a005457da65cc03776e626eb158781257b3675f9fd1271cecf255",
-   "a9210e46747c1904afd14ddc2016156b6369f252096cc552c27c4f4261fa3f61"
+   "a9210e46747c1904afd14ddc2016156b6369f252096cc552c27c4f4261fa3f61",
+   "9354c98adc040bc821fad376ef1a6a1e66e51099cae2ad50822ae91f3628d240"
   ],
   "mod/script/012000_battle.luabnd.dcx": [
    "039ed03a10a7574d7cdb691c13a9d07274b09aad4c466fa0d87be8b646551bb3"
@@ -29894,12 +29906,13 @@
   "store-001": 950,
   "store-002": 950,
   "store-003": 950,
-  "store-004": 767
+  "store-004": 769
  },
  "versions": [
   "1.1.2",
   "1.2",
   "1.2.1",
-  "1.2.2"
+  "1.2.2",
+  "1.2.3"
  ]
 }

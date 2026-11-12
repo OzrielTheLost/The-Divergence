@@ -1,11 +1,11 @@
 {
- "changelog": "1.2.2 (2026-11-11)\n\nSeeds are unchanged, so map rolls match 1.2.\n\nFixes\n- Fixed a crash that could happen in long sessions, usually during big boss fights.\n- If you've edited your launch profile, switch to the new one the updater saves next to it (The Divergence.me3.new). The crash fix only works with the new profile.",
+ "changelog": "1.2.3 (2026-11-11)\n\nSeeds are unchanged, so map rolls match 1.2.\n\nFixes\n- Erdtree Sentry (field boss): it now fights instead of standing still.\n- Bows in the left hand: Devonia's Longbow and bows with the Abyssal Flame Shot skill no longer break your right-hand weapon's skill; L2 now uses the right weapon's skill, like every other bow.",
  "files": {
   "CHANGELOG.txt": {
-   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/737408259",
-   "sha256": "32c8ac06d110575ba57d22a1825f298a5c8f105172aefa0c274a5e9b37d4b0ad",
-   "size": 11039,
-   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/32c8ac06d110575ba57d22a1825f298a5c8f105172aefa0c274a5e9b37d4b0ad"
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/737754404",
+   "sha256": "272e2aed84b5a5599c67eb434ce8724af3483ef7e04caf39ff11a97e9c93878d",
+   "size": 11378,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/272e2aed84b5a5599c67eb434ce8724af3483ef7e04caf39ff11a97e9c93878d"
   },
   "The Divergence (Convergence night bosses ONLY).me3": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/737408195",
@@ -20242,10 +20242,10 @@
    "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-003/c65b8531e3db83ce68b86bc232b83ca3d3c95628e3d927b5d1e12ba466b62d3a"
   },
   "mod/regulation.bin": {
-   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/707544419",
-   "sha256": "a9210e46747c1904afd14ddc2016156b6369f252096cc552c27c4f4261fa3f61",
-   "size": 3934960,
-   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/a9210e46747c1904afd14ddc2016156b6369f252096cc552c27c4f4261fa3f61"
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/737754450",
+   "sha256": "9354c98adc040bc821fad376ef1a6a1e66e51099cae2ad50822ae91f3628d240",
+   "size": 3934944,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/9354c98adc040bc821fad376ef1a6a1e66e51099cae2ad50822ae91f3628d240"
   },
   "mod/script/012000_battle.luabnd.dcx": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699943635",
@@ -23511,5 +23511,5 @@
   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/6baa638ad8cf2fd3f2f82d94cca26875b95812af35794f37ff4a8ad0e436b1b0",
   "version": "1.0.1"
  },
- "version": "1.2.2"
+ "version": "1.2.3"
 }
