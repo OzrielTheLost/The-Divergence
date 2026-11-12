@@ -23504,5 +23504,12 @@
  "obsolete": {},
  "released": "2026-11-11",
  "schema": 1,
+ "updater": {
+  "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/724124575",
+  "sha256": "6baa638ad8cf2fd3f2f82d94cca26875b95812af35794f37ff4a8ad0e436b1b0",
+  "size": 13378071,
+  "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/6baa638ad8cf2fd3f2f82d94cca26875b95812af35794f37ff4a8ad0e436b1b0",
+  "version": "1.0.1"
+ },
  "version": "1.2.2"
 }
