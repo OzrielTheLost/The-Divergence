@@ -258,3 +258,58 @@ def test_crash_mid_apply_recovers(env, releases, monkeypatch):
     monkeypatch.setattr(du, "move_into", real)
     du.do_update(str(inst))
     assert tree(inst) == tree(v2)
+
+
+# ------------------------------------------------------------------ update tool entry
+
+def _manifest(e):
+    with open(e["out"] / "manifest.json", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def _fake_exe(e, name, data):
+    p = e["tmp"] / name
+    p.write_bytes(data)
+    return p
+
+
+def test_updater_entry_kept_without_exe(env):
+    rel = env["tmp"] / "v1"
+    make_v1(str(rel))
+    exe = _fake_exe(env, "tool_a.exe", b"TOOL-A" * 100)
+    publish(env, rel, "1.0", ["--updater-exe", str(exe), "--updater-version", "1.0.1"])
+    first = _manifest(env)["updater"]
+    assert first["version"] == "1.0.1"
+    assert first["sha256"] == hashlib.sha256(exe.read_bytes()).hexdigest()
+
+    out = publish(env, rel, "1.1")  # no --updater-exe: carry the entry over unchanged
+    assert _manifest(env)["updater"] == first
+    assert "keeping 1.0.1" in out
+
+    publish(env, rel, "1.2", ["--dry"])  # dry run writes nothing
+    assert _manifest(env)["version"] == "1.1"
+
+
+def test_updater_entry_replaced_with_exe(env):
+    rel = env["tmp"] / "v1"
+    make_v1(str(rel))
+    publish(env, rel, "1.0", ["--updater-exe", str(_fake_exe(env, "a.exe", b"TOOL-A" * 100)),
+                              "--updater-version", "1.0.1"])
+    exe_b = _fake_exe(env, "b.exe", b"TOOL-B" * 120)
+    publish(env, rel, "1.1", ["--updater-exe", str(exe_b), "--updater-version", "1.0.2"])
+    u = _manifest(env)["updater"]
+    assert u["version"] == "1.0.2"
+    assert u["sha256"] == hashlib.sha256(exe_b.read_bytes()).hexdigest()
+    assert u["size"] == len(exe_b.read_bytes())
+    assert u["url"].startswith(env["base"])
+
+
+def test_updater_entry_dropped_on_request(env):
+    rel = env["tmp"] / "v1"
+    make_v1(str(rel))
+    publish(env, rel, "1.0", ["--updater-exe", str(_fake_exe(env, "a.exe", b"TOOL-A" * 100)),
+                              "--updater-version", "1.0.1"])
+    publish(env, rel, "1.1", ["--drop-updater"])
+    assert "updater" not in _manifest(env)
+    publish(env, rel, "1.2")  # nothing to carry over any more
+    assert "updater" not in _manifest(env)

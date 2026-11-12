@@ -8,6 +8,8 @@ history.json. Run from a clone of the The-Divergence repo (the manifest is commi
     python updater/publish.py <release dir> --version 1.1.3 --dry          # show what would upload
     python updater/publish.py <release dir> --version 1.1.3 --updater-exe "dist/The Divergence Update Tool.exe"
 
+Without --updater-exe the current manifest's update tool entry is carried over unchanged; --drop-updater removes it.
+
 Storage backends:
     default        GitHub Releases on --repo, via the `gh` CLI (must be logged in: `gh auth login`)
     --local-store  copy blobs into a folder served at --base-url (tests, or any static host)
@@ -271,6 +273,9 @@ def main():
                     help="where manifest.json and history.json live (default: the repo root)")
     ap.add_argument("--updater-exe", help="built update tool exe to advertise for self-update")
     ap.add_argument("--updater-version", help="version of --updater-exe (default: read from divergence_updater.py)")
+    ap.add_argument("--drop-updater", action="store_true",
+                    help="leave the update tool entry out of the manifest (default: keep the current manifest's "
+                         "entry unless --updater-exe replaces it)")
     ap.add_argument("--local-store", help="copy blobs into this folder instead of GitHub Releases")
     ap.add_argument("--base-url", help="URL where --local-store is served")
     ap.add_argument("--exclude", action="append", default=[], metavar="PATTERN",
@@ -278,6 +283,8 @@ def main():
     ap.add_argument("--dry", action="store_true")
     ap.add_argument("--push", action="store_true", help="git commit + push manifest.json/history.json in --out")
     args = ap.parse_args()
+    if args.drop_updater and args.updater_exe:
+        sys.exit("--drop-updater and --updater-exe can't be used together")
 
     root = os.path.abspath(args.release_dir)
     if not os.path.isdir(os.path.join(root, "mod")):
@@ -285,6 +292,7 @@ def main():
     manifest_path = os.path.join(args.out, "manifest.json")
     history_path = os.path.join(args.out, "history.json")
     history = load_json(history_path, {"paths": {}, "blobs": {}, "stores": {}, "versions": []})
+    prev_updater = load_json(manifest_path, {}).get("updater")
 
     print(f"[1/4] Hashing {root} ...")
     IGNORE.extend(p.replace("\\", "/") for p in args.exclude)
@@ -332,6 +340,13 @@ def main():
             updater = {"version": uver, "sha256": usha, "size": os.path.getsize(args.updater_exe)}
             if usha not in history["blobs"]:
                 to_upload[usha] = args.updater_exe
+            print(f"      Update tool: {uver} (new exe)")
+        elif args.drop_updater:
+            print("      Update tool: entry removed (--drop-updater)")
+        elif prev_updater:
+            print(f"      Update tool: keeping {prev_updater.get('version')} from the current manifest")
+        else:
+            print("      Update tool: none (the current manifest has no entry)")
 
         up_bytes = sum(os.path.getsize(p) for p in to_upload.values())
         print(f"[2/4] {len(to_upload)} new blob(s) to upload ({up_bytes / 1048576:.1f} MB); "
@@ -408,6 +423,8 @@ def main():
     if updater:
         updater.update({k: v for k, v in history["blobs"][updater["sha256"]].items() if k != "release"})
         manifest["updater"] = updater
+    elif prev_updater and not args.drop_updater:
+        manifest["updater"] = prev_updater  # no new exe: players keep being offered the current tool
     if args.version not in history["versions"]:
         history["versions"].append(args.version)
 
