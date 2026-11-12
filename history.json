@@ -3580,6 +3580,11 @@
    "release": "store-004",
    "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/32c3209a2346a43000f86e8786e2ac95a9ef5c47aca3cbef179ab220d1a13baa"
   },
+  "32c8ac06d110575ba57d22a1825f298a5c8f105172aefa0c274a5e9b37d4b0ad": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/737408259",
+   "release": "store-004",
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/32c8ac06d110575ba57d22a1825f298a5c8f105172aefa0c274a5e9b37d4b0ad"
+  },
   "32fbf4e026a61c6613c63b0e97a2f13d149543fdf8b7dba1c6be4bfa33967c5e": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699952301",
    "release": "store-001",
@@ -6355,6 +6360,11 @@
    "release": "store-003",
    "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-003/590b0b0c8717d2d254266225c820e0730adfa88a438895a57ef5eb1d4832817c"
   },
+  "59142bd0facd17a1810539b3bd424d0f4fed8f2396f26415ff2ce1f3ddf42098": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/737408356",
+   "release": "store-004",
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/59142bd0facd17a1810539b3bd424d0f4fed8f2396f26415ff2ce1f3ddf42098"
+  },
   "591735e298078b1041861a2dcfde2d1597973dc2bfc7e6f4cad155902c4fec52": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699959584",
    "release": "store-001",
@@ -8564,6 +8574,11 @@
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/700220412",
    "release": "store-004",
    "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/77446a49f960d850c374a1a79f53c5f7a4afb8f8488900c30e308af86ed42d2c"
+  },
+  "7751b8c11780e6c126b9a8301abf43768d6d3101ac50158dd8721d9219167841": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/737408195",
+   "release": "store-004",
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/7751b8c11780e6c126b9a8301abf43768d6d3101ac50158dd8721d9219167841"
   },
   "776072107cfd9d6ece302337d905cd14d4a4e27b16e01c42bc4541f6359c4622": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/700016076",
@@ -16605,6 +16620,11 @@
    "release": "store-003",
    "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-003/eb17256111e93d3eec997353d233d5e2da921906c2b4b723f1896b44a91fbdcb"
   },
+  "eb19a4e95dd011f35b06f63a76ff3f6023bcfa6b6735321782685f5b13aead5e": {
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/737408138",
+   "release": "store-004",
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/eb19a4e95dd011f35b06f63a76ff3f6023bcfa6b6735321782685f5b13aead5e"
+  },
   "eb1a497245059db1dbd234024114a1d6a03d341ab20c6a143ade6a38d696955d": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699973080",
    "release": "store-001",
@@ -18075,13 +18095,16 @@
    "3f1e3c51d99d7d4faaf1a7c38c56f0742095b726f61c023ea99335b15a2f7d2a",
    "90c428e343b23bc7a1afe1837570479bbc97a411c6cec4980368ee18a1208763",
    "40ac8beeee9466d59f62998b0baade3eb06c8f61bf21481e39494728db409679",
-   "286d707a3a98b729777a0d5eea57c41be778579fefd43e0a07d9358a7d2423b6"
+   "286d707a3a98b729777a0d5eea57c41be778579fefd43e0a07d9358a7d2423b6",
+   "32c8ac06d110575ba57d22a1825f298a5c8f105172aefa0c274a5e9b37d4b0ad"
   ],
   "The Divergence (Convergence night bosses ONLY).me3": [
-   "f0e048dc29ec6c7577df54a8001318f115c0dc4deed356e38e61684f5eb2247b"
+   "f0e048dc29ec6c7577df54a8001318f115c0dc4deed356e38e61684f5eb2247b",
+   "7751b8c11780e6c126b9a8301abf43768d6d3101ac50158dd8721d9219167841"
   ],
   "The Divergence.me3": [
-   "329e2dd85ed3a115f41d3a0543a12fd21183dd3f308826cea5c255d8d8b0e5eb"
+   "329e2dd85ed3a115f41d3a0543a12fd21183dd3f308826cea5c255d8d8b0e5eb",
+   "eb19a4e95dd011f35b06f63a76ff3f6023bcfa6b6735321782685f5b13aead5e"
   ],
   "mod/ServerRedirector/cl_server_redirector.dll": [
    "9413c4e6c4cc6d958e4b3dd4756548168749622ad2e0d5a4bd9ad3295ff2350c"
@@ -25459,7 +25482,8 @@
   ],
   "mod/dll/Scripts-Data-Exposer-NR.dll": [
    "d06c89d8010301ef5b2c1532e71675bf41cafb474e1a3074ad07ccb7ea0739c9",
-   "91ddad548c4c69e48255f5ca9ab75dc03e3133d08d129f0b43a792897b62af27"
+   "91ddad548c4c69e48255f5ca9ab75dc03e3133d08d129f0b43a792897b62af27",
+   "59142bd0facd17a1810539b3bd424d0f4fed8f2396f26415ff2ce1f3ddf42098"
   ],
   "mod/dll/custom_drop_fxrs.dll": [
    "36e725c92a005c965c658e1013a6ef4134ae8dc81cfed15b021824485510f791"
@@ -29870,11 +29894,12 @@
   "store-001": 950,
   "store-002": 950,
   "store-003": 950,
-  "store-004": 763
+  "store-004": 767
  },
  "versions": [
   "1.1.2",
   "1.2",
-  "1.2.1"
+  "1.2.1",
+  "1.2.2"
  ]
 }

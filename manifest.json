@@ -1,30 +1,32 @@
 {
- "changelog": "1.2.1 (2026-11-07)\n\nSeeds are unchanged, so map rolls match 1.2.\n\nFixes\n- Roundtable Hold: Daergraf now appears along with the rest of the hold instead of a few seconds later. This may fix occasional crashes when returning from an expedition.\n- Updater: if you've edited your launch profile, the updater now reminds you at the end to switch to the new one, and stops downloading it again on every run.",
+ "changelog": "1.2.2 (2026-11-11)\n\nSeeds are unchanged, so map rolls match 1.2.\n\nFixes\n- Fixed a crash that could happen in long sessions, usually during big boss fights.\n- If you've edited your launch profile, switch to the new one the updater saves next to it (The Divergence.me3.new). The crash fix only works with the new profile.",
  "files": {
   "CHANGELOG.txt": {
-   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/724124453",
-   "sha256": "286d707a3a98b729777a0d5eea57c41be778579fefd43e0a07d9358a7d2423b6",
-   "size": 10718,
-   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/286d707a3a98b729777a0d5eea57c41be778579fefd43e0a07d9358a7d2423b6"
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/737408259",
+   "sha256": "32c8ac06d110575ba57d22a1825f298a5c8f105172aefa0c274a5e9b37d4b0ad",
+   "size": 11039,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/32c8ac06d110575ba57d22a1825f298a5c8f105172aefa0c274a5e9b37d4b0ad"
   },
   "The Divergence (Convergence night bosses ONLY).me3": {
-   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699935274",
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/737408195",
    "known": [
+    "7751b8c11780e6c126b9a8301abf43768d6d3101ac50158dd8721d9219167841",
     "f0e048dc29ec6c7577df54a8001318f115c0dc4deed356e38e61684f5eb2247b"
    ],
-   "sha256": "f0e048dc29ec6c7577df54a8001318f115c0dc4deed356e38e61684f5eb2247b",
-   "size": 398,
-   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-001/f0e048dc29ec6c7577df54a8001318f115c0dc4deed356e38e61684f5eb2247b",
+   "sha256": "7751b8c11780e6c126b9a8301abf43768d6d3101ac50158dd8721d9219167841",
+   "size": 416,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/7751b8c11780e6c126b9a8301abf43768d6d3101ac50158dd8721d9219167841",
    "user": true
   },
   "The Divergence.me3": {
-   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/699935251",
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/737408138",
    "known": [
-    "329e2dd85ed3a115f41d3a0543a12fd21183dd3f308826cea5c255d8d8b0e5eb"
+    "329e2dd85ed3a115f41d3a0543a12fd21183dd3f308826cea5c255d8d8b0e5eb",
+    "eb19a4e95dd011f35b06f63a76ff3f6023bcfa6b6735321782685f5b13aead5e"
    ],
-   "sha256": "329e2dd85ed3a115f41d3a0543a12fd21183dd3f308826cea5c255d8d8b0e5eb",
-   "size": 380,
-   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-001/329e2dd85ed3a115f41d3a0543a12fd21183dd3f308826cea5c255d8d8b0e5eb",
+   "sha256": "eb19a4e95dd011f35b06f63a76ff3f6023bcfa6b6735321782685f5b13aead5e",
+   "size": 401,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/eb19a4e95dd011f35b06f63a76ff3f6023bcfa6b6735321782685f5b13aead5e",
    "user": true
   },
   "mod/ServerRedirector/cl_server_redirector.dll": {
@@ -14762,10 +14764,10 @@
    "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/9c7838d26515ab1b650de6060ce73e4513ff79725a6f3f59f9cafb10d27d4bd8"
   },
   "mod/dll/Scripts-Data-Exposer-NR.dll": {
-   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/704161324",
-   "sha256": "91ddad548c4c69e48255f5ca9ab75dc03e3133d08d129f0b43a792897b62af27",
-   "size": 89088,
-   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/91ddad548c4c69e48255f5ca9ab75dc03e3133d08d129f0b43a792897b62af27"
+   "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/737408356",
+   "sha256": "59142bd0facd17a1810539b3bd424d0f4fed8f2396f26415ff2ce1f3ddf42098",
+   "size": 99840,
+   "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/59142bd0facd17a1810539b3bd424d0f4fed8f2396f26415ff2ce1f3ddf42098"
   },
   "mod/dll/custom_drop_fxrs.dll": {
    "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/700050558",
@@ -23500,14 +23502,7 @@
  },
  "mod": "The Divergence",
  "obsolete": {},
- "released": "2026-11-08",
+ "released": "2026-11-11",
  "schema": 1,
- "updater": {
-  "api": "https://api.github.com/repos/OzrielTheLost/The-Divergence/releases/assets/724124575",
-  "sha256": "6baa638ad8cf2fd3f2f82d94cca26875b95812af35794f37ff4a8ad0e436b1b0",
-  "size": 13378071,
-  "url": "https://github.com/OzrielTheLost/The-Divergence/releases/download/store-004/6baa638ad8cf2fd3f2f82d94cca26875b95812af35794f37ff4a8ad0e436b1b0",
-  "version": "1.0.1"
- },
- "version": "1.2.1"
+ "version": "1.2.2"
 }
